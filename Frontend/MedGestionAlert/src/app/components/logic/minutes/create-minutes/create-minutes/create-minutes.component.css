@@ -1,0 +1,15 @@
+.container{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+
+.width-input{
+
+    margin-left: 5%;
+    width: 40%;
+
+    .mat-mdc-form-field {
+        width: 40%;
+      }
+}

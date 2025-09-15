@@ -1,0 +1,53 @@
+<mat-sidenav-container>
+    <mat-sidenav-content class="content-top">
+        <div class="content">
+            <mat-card class="content-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>MedGestionAlert</mat-card-title>
+                    <mat-card-subtitle>AVAMEDICAL S.A.S</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+
+                <mat-card-content>
+                    <form class="formulario-log" [formGroup]="loginForm" id="form-log">
+                        <div class="contenido-input">
+                            <mat-form-field color="primary">
+                                <mat-label>Correo electrónico</mat-label>
+                                <input matInput formControlName="email" required>
+                                <button mat-icon-button matSuffix>
+                                    <mat-icon fontIcon="email"></mat-icon>
+                                </button>
+                                <mat-error *ngIf="loginForm.get('email')!.invalid">
+                                    {{ getErrorMessage() }}
+                                </mat-error>
+                            </mat-form-field>
+
+                        </div>
+                        <div class="contenido-input">
+                            <mat-form-field>
+                                <mat-label>Contraseña</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" matInput
+                                    required>
+                                <button mat-icon-button matSuffix (click)="hide = !hide"
+                                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+                    </form>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="onLogin()" [disabled]="loading">
+                          <ng-container *ngIf="!loading">Iniciar Sesión</ng-container>
+                          <ng-container *ngIf="loading"></ng-container>
+                          <mat-spinner *ngIf="loading" diameter="24" color="accent"></mat-spinner>
+                    </button>
+                    <!-- <button mat-button>SHARE</button> -->
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

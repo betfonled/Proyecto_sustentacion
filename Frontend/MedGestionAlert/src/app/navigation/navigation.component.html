@@ -1,0 +1,37 @@
+<div *ngIf="token<=0; else viewAdmin">
+
+</div>
+
+<ng-template #viewAdmin>
+    <mat-toolbar color="primary" class="mat-elevation-z6">
+        <span>Menú</span>
+
+        <div class="spacer"> </div>
+
+        <button mat-button [matMenuTriggerFor]="menu">Administración</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/administration/rols">Roles</button>
+            <button mat-menu-item routerLink="/administration/users">Usuarios</button>
+        </mat-menu>
+
+        <button mat-button routerLink="/load-information">Cargue datos</button>
+
+        <button mat-button [matMenuTriggerFor]="menuP">Parametria</button>
+        <mat-menu #menuP="matMenu">
+            <button mat-menu-item routerLink="/home">Parametro Unico</button>
+            <button mat-menu-item routerLink="/home">Cliente</button>
+        </mat-menu>
+
+        <button mat-button routerLink="/minutes">Acta</button>
+
+        <button mat-button [matMenuTriggerFor]="menuAu">Auditoria</button>
+        <mat-menu #menuAu="matMenu">
+            <button mat-menu-item routerLink="/audit/log-errors">Log de errores</button>
+            <button mat-menu-item routerLink="/audit/log-process">Log de procesos</button>
+        </mat-menu>
+
+
+        <a mat-raised-button color="accent" (click)="onLogout()"> Cerrar sesión</a>
+
+    </mat-toolbar>
+</ng-template>

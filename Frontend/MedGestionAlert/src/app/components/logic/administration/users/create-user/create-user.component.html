@@ -1,0 +1,58 @@
+<div class="container-modal">
+
+  <mat-toolbar>
+    <span>Informacion Usuario</span>
+  </mat-toolbar>
+
+  <mat-card>
+    <form [formGroup]="formCrear">
+
+      <mat-form-field class="width-input">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="userName" placeholder="Nombre" required />
+      </mat-form-field>
+
+      <mat-form-field class="width-input">
+        <mat-label>Correo</mat-label>
+        <input matInput formControlName="email" placeholder="Usuario" required />
+      </mat-form-field>
+
+      <mat-form-field class="width-input">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput formControlName="passwordApp" placeholder="Contraseña" name="passwordApp"
+          required />
+        <mat-error *ngIf="isValidField('passwordApp')">{{getErrorMsje('passwordApp')}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="width-input">
+        <input type="password" matInput formControlName="passwordApp2" placeholder="Confirmar Contraseña"
+          name="passwordApp2" required />
+        <mat-error *ngIf="isValidField('passwordApp2')">{{getErrorMsje('passwordApp2')}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="width-input">
+        <mat-label>Seleccionar Rol</mat-label>
+        <mat-select formControlName="rol">
+          <mat-option [value]="option.nameRol" *ngFor="let option of roles">{{ option.nameRol }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="width-input">
+        <mat-label>Estado usuario</mat-label>
+        <mat-select formControlName="stateSession">
+          <mat-option value="A">Activo</mat-option>
+          <mat-option value="I">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Volver</button>
+        <button mat-raised-button color="primary" [disabled]="formCrear.invalid" [mat-dialog-close]="true"
+          (click)="onSave()">Guardar</button>
+      </div>
+
+    </form>
+  </mat-card>
+
+</div>

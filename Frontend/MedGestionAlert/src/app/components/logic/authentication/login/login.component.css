@@ -1,0 +1,119 @@
+.content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.content-top {
+  background: linear-gradient(135deg, #0077B6 0%, #0196C7 100%);
+}
+
+.content-card {
+  min-width: 380px;
+  max-width: 450px;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+mat-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0077B6;
+  margin-top: 8px;
+}
+
+mat-card-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  border-radius: 8px !important;
+}
+
+::ng-deep .mdc-text-field--focused {
+  border-color: #0077B6 !important;
+  box-shadow: 0 0 4px rgba(0, 119, 182, 0.4);
+}
+
+button[mat-raised-button] {
+  width: 100%;
+  height: 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background-color: #673ab7;
+  transition: all 0.3s ease-in-out;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #5a2ea6;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 14px rgba(103, 58, 183, 0.4);
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+mat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+mat-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0077B6;
+  margin-top: 12px;
+}
+
+mat-card-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.error-snackbar {
+  background-color: #d32f2f; /* rojo error */
+  color: white;
+  font-weight: 500;
+}
+
+button mat-spinner {
+  margin: 0 auto;
+}
+
+button[mat-raised-button] {
+  min-width: 160px; /* ancho fijo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

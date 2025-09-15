@@ -1,0 +1,41 @@
+<div class="container-modal">
+<h1 mat-dialog-title>{{data.id ? 'Editar contrato' : 'Nuevo contrato'}}</h1>
+  <mat-card>
+  <form [formGroup]="form">
+    <mat-form-field appearance="fill" class="width-input">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="width-input">
+      <mat-label>Tipo de servicio</mat-label>
+      <mat-select formControlName="tipoServicio">
+        <mat-option value="Soporte">Soporte</mat-option>
+        <mat-option value="Desarrollo">Desarrollo</mat-option>
+        <mat-option value="Implementación">Implementación</mat-option>
+        <mat-option value="Otro">Otro</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="width-input">
+      <mat-label>Estado</mat-label>
+      <mat-select formControlName="estado">
+        <mat-option value="En progreso">En progreso</mat-option>
+        <mat-option value="Finalizado">Finalizado</mat-option>
+        <mat-option value="Cancelado">Cancelado</mat-option>
+        <mat-option value="Activo">Activo</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="width-input">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="descripcion"></textarea>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Guardar</button>
+</div>
+  </form>
+    </mat-card>
+</div>

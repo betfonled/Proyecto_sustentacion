@@ -1,0 +1,162 @@
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  @media (max-width: 767px) {
+    flex-direction: column; /* Para pantallas pequeñas */
+    /* margin-top: 43%; */
+    height: 145%;
+  }
+}
+
+.box1 {
+  max-width: 50%;
+  min-width: 20%;
+  /* height: 100%; */
+  float: left;
+  /* border-style: solid; */
+  padding-left: 10px;
+  padding-right: 10px;
+
+  height: 80vh;
+}
+
+.box2 {
+  max-width: 50%;
+  min-width: 60%;
+  height: 100%; 
+  float: left;
+  /* border-style: solid; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 767px) {
+
+  .box1, .box2 {
+    width: 100%; /* Ocupan todo el ancho en pantallas pequeñas */
+    max-width: 100%;
+  }
+}
+
+.search-button, .table{
+  vertical-align: top;
+}
+
+table{
+  width: 100%;  
+}
+
+.button-dialog {
+  float: right;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+mat-toolbar {
+  justify-content: center;
+}
+
+/* .search-button{
+  width: 100%;
+} */
+.search {
+  width: 85%;
+  float: left;
+
+  .mat-mdc-form-field {
+    width: 85%;
+  }
+}
+
+.mat-table {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.mat-paginator {
+  max-height: 5vh;
+  flex-shrink: 1;
+}
+
+.button-add {
+  float: left;
+  width: 15%;
+}
+
+.content-options {
+  min-width: 35%;
+  max-width: 68%;
+  margin-left: 16%;
+  margin-right: 16%;
+  max-height: 55vh;
+  overflow-y: scroll;
+
+  @media (max-width: 767px) {
+    margin-left: 0%;
+    margin-right: 0%;
+    max-width: 100%;
+  }
+
+}
+
+
+ul{
+  padding-inline-start: 5%;
+}
+
+.title-option {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.text-check {
+  font-weight: 350;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+.buttons-box2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  flex-wrap: wrap;
+}
+.mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white !important;
+}
+
+::ng-deep.inputs {
+  background-color: white;
+}
+
+::ng-deep.mat-toolbar-row,
+.mat-toolbar-single-row {
+  background-color: white;
+}
+
+::ng-deep.--mdc-filled-text-field-container-color {
+  background-color: white;
+}
+
+::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white !important;
+}

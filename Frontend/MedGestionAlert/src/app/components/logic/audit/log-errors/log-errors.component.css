@@ -1,0 +1,103 @@
+.container-modal{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.box1 {
+    max-width: 100%;
+    min-width: 60%;
+    height: 100%;
+  }
+
+.container{
+    max-width: 100%;
+    min-width: 60%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+table {
+    margin-top: 15px;
+  }
+
+th{
+    width: 30px;
+}
+
+  
+.pointer{
+    cursor:pointer;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+.width-input{
+    width: 70%;
+}
+
+.button-add {
+    float: left;
+    width: 15%;
+  }
+
+.search {
+    width: 70%;
+    padding-left: 1%;
+    float: left;
+  
+    .mat-mdc-form-field {
+      width: 70%;
+    }
+  }
+
+  mat-toolbar {
+    justify-content: center;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white !important;
+}
+
+::ng-deep.inputs {
+  background-color: white;
+}
+
+::ng-deep.mat-toolbar-row,
+.mat-toolbar-single-row {
+  background-color: white;
+}
+
+::ng-deep.--mdc-filled-text-field-container-color {
+  background-color: white;
+}
+
+::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: 10px;          
+  margin-right: 20px;        
+  padding-bottom: 10px;      
+}
+
+.btn-excel {
+  background-color: #4caf50 !important; 
+  color: white !important;
+  font-weight: bold;
+  padding: 6px 16px;        
+  border-radius: 4px;
+  border-color: unset;
+}
+

@@ -1,0 +1,97 @@
+.container-modal {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box1 {
+  max-width: 100%;
+  min-width: 60%;
+  height: 100%;
+}
+
+.container {
+  max-width: 100%;
+  min-width: 60%;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 15px;
+}
+
+table {
+  margin-top: 15px;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+mat-toolbar {
+  justify-content: center;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.search {
+  width: 70%;
+  padding-left: 1%;
+  float: left;
+}
+
+.search .mat-mdc-form-field {
+  width: 70%;
+}
+
+.width-input {
+  width: 70%;
+}
+
+.button-add {
+  float: left;
+  width: 15%;
+}
+
+button.mat-fab {
+  background-color: #1976d2;
+  color: white;
+}
+
+button.mat-fab:hover {
+  background-color: #125a9c;
+}
+
+a.pointer {
+  margin: 0 5px;
+}
+
+.download-btn {
+  margin-top: 15px;
+  float: right;
+  background-color: #28a745;
+  color: white;
+}
+
+.download-btn:hover {
+  background-color: #1e7e34;
+}

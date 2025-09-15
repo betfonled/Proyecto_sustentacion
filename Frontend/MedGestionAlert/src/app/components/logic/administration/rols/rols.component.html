@@ -1,0 +1,86 @@
+<div class="container mat-elevation-z8">
+    <!-- Inicio de caja numero 1 -->
+    <div class="box1">
+
+        <mat-toolbar class="d-flex justify-content-center">
+            <div>
+                <h1>Roles</h1>
+            </div>
+        </mat-toolbar>
+        <div class="search-button">
+            <div class="search">
+                <mat-form-field>
+                    <mat-label>Buscar</mat-label>
+                    <input matInput class="inputs" (keyup)="applyFilter($event)" placeholder="Filtro de Roles" #input>
+                </mat-form-field>
+            </div>
+            <div class="button-add">
+                <button mat-fab color="primary" (click)="openDialog()">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div>
+            <table mat-table [dataSource]="dataSource" matSort>
+                <ng-container matColumnDef="rol">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Rol </th>
+                    <td mat-cell *matCellDef="let element"> <a (click)="getElement(element.id)">{{element.nameRol}}</a>
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="option-buttons">
+                    <th style="text-align: right" mat-header-cell *matHeaderCellDef> Opciones </th>
+                    <td mat-cell *matCellDef="let element" style="text-align: right">
+                        <a class="pointer" style="color: #042CF4;" matTooltip="Ver Rol Opcion"
+                            (click)="getElement(element.id)">
+                            <mat-icon>search</mat-icon>
+                        </a>
+                        <a class="pointer" style="color: #E09108;" matTooltip="Editar Rol"
+                            (click)="onUpdateRol(element)">
+                            <mat-icon>edit</mat-icon>
+                        </a>
+                        <a class="pointer" style="color: #6C685D;" matTooltip="Eliminar Rol"
+                            (click)="onDelete(element.id)">
+                            <mat-icon>delete</mat-icon>
+                        </a>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10]" [hidePageSize]="true"></mat-paginator>
+        </div>
+    </div>
+    <!-- Inicio de caja numero 2 -->
+    <div class="box2">
+        <mat-toolbar class="d-flex justify-content-center">
+            <div>
+                <h1>Opciones por Rol</h1>
+            </div>
+        </mat-toolbar>
+        <div class="content-options">
+            <section>
+                <ul style="color: black" *ngFor="let item of optionsItems">
+                    <!-- <div *ngIf="item.Id===null">{{item.RolName}}</div> -->
+                    <div
+                        *ngIf="item.idFather==null && item.children==1 || item.optionName=='Acta'  || item.optionName=='Cargue datos'">
+                        <p class="title-option">{{item.optionName}}</p>
+                    </div>
+                    <div>
+                        <mat-checkbox *ngIf="item.children==0 || item.children==null" [checked]="item.check"
+                            (change)="rolsOptions(item)">
+                            <p class="text-check">{{item.optionName}}</p>
+                        </mat-checkbox>
+                    </div>
+                    <mat-divider></mat-divider>
+                </ul>
+            </section>
+        </div>
+        <div class="buttons-box2">
+            <button mat-raised-button color="primary" (click)="saveRolOption()">Guardar</button>
+            <button mat-raised-button color="primary" (click)="deleteRolOption()">Eliminar</button>
+            <button mat-raised-button color="primary" (click)="clearForm()">Limpiar</button>
+
+        </div>
+    </div>
+</div>
