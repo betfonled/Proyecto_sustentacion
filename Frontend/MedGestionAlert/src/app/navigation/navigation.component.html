@@ -14,15 +14,12 @@
             <button mat-menu-item routerLink="/administration/users">Usuarios</button>
         </mat-menu>
 
-        <button mat-button routerLink="/load-information">Cargue datos</button>
+        <button mat-button routerLink="/load-information/clients">Clientes</button>
 
-        <button mat-button [matMenuTriggerFor]="menuP">Parametria</button>
-        <mat-menu #menuP="matMenu">
-            <button mat-menu-item routerLink="/home">Parametro Unico</button>
-            <button mat-menu-item routerLink="/home">Cliente</button>
-        </mat-menu>
+        <button mat-button routerLink="/reports">Proyectos</button>
 
-        <button mat-button routerLink="/minutes">Acta</button>
+
+        <button mat-button routerLink="/minutes">Contratos</button>
 
         <button mat-button [matMenuTriggerFor]="menuAu">Auditoria</button>
         <mat-menu #menuAu="matMenu">

@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,9 +35,6 @@ const myTheme: any = {
     ],
     exports: [
         MatToolbarModule,
-    ],
-    schemas: [
-        CUSTOM_ELEMENTS_SCHEMA
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,

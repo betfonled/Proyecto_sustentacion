@@ -1,0 +1,53 @@
+<div class="container-modal">
+  <h1 mat-dialog-title>{{ data.id ? 'Editar proyecto' : 'Nuevo proyecto' }}</h1>
+  <mat-card>
+    <form [formGroup]="form">
+
+      <!-- Nombre del proyecto -->
+      <mat-form-field appearance="fill" class="width-input">
+        <mat-label>Nombre del proyecto</mat-label>
+        <input matInput formControlName="nombreProyecto" />
+      </mat-form-field>
+
+      <!-- Fase -->
+      <mat-form-field appearance="fill" class="width-input">
+        <mat-label>Fase</mat-label>
+        <mat-select formControlName="fase">
+          <mat-option value="Requerimientos">Requerimientos</mat-option>
+          <mat-option value="Desarrollo">Desarrollo</mat-option>
+          <mat-option value="Finalizado">Finalizado</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Fecha de inicio -->
+      <mat-form-field appearance="fill" class="width-input">
+        <mat-label>Fecha de inicio</mat-label>
+        <input matInput [matDatepicker]="pickerInicio" formControlName="fechaInicio">
+        <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+        <mat-datepicker #pickerInicio></mat-datepicker>
+      </mat-form-field>
+
+      <!-- Fecha fin -->
+      <mat-form-field appearance="fill" class="width-input">
+        <mat-label>Fecha fin</mat-label>
+        <input matInput [matDatepicker]="pickerFin" formControlName="fechaFin">
+        <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+        <mat-datepicker #pickerFin></mat-datepicker>
+      </mat-form-field>
+
+      <!-- Estado -->
+      <mat-form-field appearance="fill" class="width-input">
+        <mat-label>Estado</mat-label>
+        <mat-select formControlName="estado">
+          <mat-option value="Activo">Activo</mat-option>
+          <mat-option value="Inactivo">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div mat-dialog-actions>
+        <button mat-button (click)="onCancel()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="onSave()">Guardar</button>
+      </div>
+    </form>
+  </mat-card>
+</div>
