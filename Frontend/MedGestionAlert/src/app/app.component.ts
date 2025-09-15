@@ -11,7 +11,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
   ruta=localStorage.getItem('route');
 
-  title = 'MedGestionAlert';
+  title = 'SoftGest';
 
 
   ngOnInit(): void {
